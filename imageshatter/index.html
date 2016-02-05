@@ -63,11 +63,9 @@ var vertices = [],
   indices = [],
   fragments = [];
 
-var num=1;
 
-  for (num=1; num <=8; num++){
 
-var container = document.getElementsByClassName('container'+ num);
+var container = document.getElementsById('container');
 
 var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
@@ -293,7 +291,7 @@ Fragment.prototype = {
 
   }
 };
-}
+
 
 </script>
 
