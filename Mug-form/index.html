@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+</head>
+<body>
+<div id="main">
+
+<div id="screen1">
+  <img src="images/bearhi.gif" class="gif">
+<div class="overlay"></div>
+<h1 class="welcome animated bounceInUp">Hello, valued employee.</h1>
+  <br/><h2 class="questions2 animated bounceInLeft">Click anywhere to continue.</h2>
+</div>
+
+
+<div id="trav">
+  <img src="images/travolta.gif" class="gif">
+  <div class="overlay"></div>
+  <h1 id="heading2" class="questions">We have some fuckall questions for you.</h1>
+  <div id="fillthis"></div>
+</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$("body").click(function(){
+  $("#trav").slideDown(500);
+});
+
+$("#trav").click(function(){
+  $("#fillthis").html("<h2 class='questions2 animated bounceInUp'>Try not to crap your pants.</h2><br/><button class='ghost-button animated bounceInUp'>Continue</button>");
+});
+
+
+});
+
+</script>
+</body>
+</html>

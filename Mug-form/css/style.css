@@ -1,0 +1,150 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
+*
+{
+  margin:0;
+  padding:0;
+  -webkit-font-smoothing:antialiased !important;
+  text-rendering: optimizeLegibility !important;
+
+}
+
+
+body
+{
+  height: 100%;
+  /*background-color:#c13389;*/
+  overflow: hidden;
+}
+
+#main
+{
+  height:100%;
+  width:100%;
+  overflow: hidden;
+}
+
+#trav{
+  height:100vh;
+  width:100%;
+  position: absolute;
+  display: none;
+}
+
+
+#screen1{
+  /*background:url('images/hi.gif');*/
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ height:100vh;
+ width:100%;
+ position: absolute;
+ z-index: -100;
+ /*display:none;*/
+
+}
+
+
+
+
+
+.gif{
+
+  width:100%;
+  height:100vh;
+  position: absolute;
+  /*z-index: -1;*/
+
+}
+
+.overlay{
+  background-color: #000;
+  height:100%;
+  width: 100%;
+  opacity:0.4;
+  position: absolute;
+}
+
+
+
+.welcome
+{
+  color:#fff;
+  font-family: "Roboto", "sans-serif";
+  font-size: 5vw;
+  position:absolute;
+  top: 40%;
+  left:25%;
+
+}
+
+.questions{
+  font-family: "Roboto",sans-serif;
+  color: #fff;
+  position: absolute;
+  font-size: 4.5vw;
+  left: 10%;
+  top:40%;
+  z-index: 1;
+
+}
+
+.questions2{
+  font-family: "Roboto",sans-serif;
+  color: #fff;
+  position: absolute;
+  font-size: 1.5vw;
+  left: 43%;
+  top:50%;
+  z-index: 1;
+  opacity:0.8;
+  font-weight: 200;
+
+}
+
+.ghost-button
+{
+  position:absolute;
+  z-index: 3;
+  left: 47%;
+  top:55%;
+  font-family: 'Roboto', sans-serif;
+    color: #009688;
+    background: transparent;
+    border: 2px solid #009688;
+    font-size: 25px;
+    border-radius:5px;
+    padding: 7px 12px;
+    font-weight: normal;
+    margin: 6px 0;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 120px;
+    transition: 0.3s;
+}
+
+.ghost-button:hover, .ghost-button:active {
+  color:#fff;
+  background:#009688;
+  transition: 0.3s;
+}
+/*.input
+{
+  width:60vw;
+  height:5vh;
+  border-radius: 5px;
+  border: 1px solid #c13389;
+  font-size: 2em;
+  position:absolute;
+  top: 45%;
+  left: 20%;
+  display:none;
+  font-family: "Open Sans",sans-serif;
+
+}*/
