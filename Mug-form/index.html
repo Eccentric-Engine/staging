@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
 
@@ -47,8 +48,10 @@
 
 
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
+
 $(document).ready(function(){
 
 $("#screen1").click(function(){
@@ -56,17 +59,30 @@ $("#screen1").click(function(){
 });
 
 $("#trav").click(function(){
-  $("#fillthis").html("<h2 class='questions2 animated bounceInUp'>Try not to crap your pants.</h2><br/><button class='ghost-button animated bounceInUp'>Continue</button>");
+  $("#fillthis").html("<h2 class='questions2 animated bounceInUp'>Try not to crap your pants.</h2><br/><button class='ghost-button animated bounceInUp' onClick='formhtml()'>Continue</button>");
 });
 
+
+setTimeout(function() {
+   $('#loader').addClass("animated fadeOutUpBig");
+   $('.container').addClass("animated fadeOutUpBig");
+ }, 1000);
 
 });
 
 // hide loader.
-setTimeout(function() {
-   $('#loader').addClass("animated fadeOutUpBig");
-   $('.container').addClass("animated fadeOutUpBig");
- }, 4000);
+
+
+
+;
+
+// console.log(mainhtml);
+
+ function formhtml(){
+   document.getElementById('main').innerHTML = "<object type='text/html' data='form.html'></object>";
+ }
+
+
 </script>
 </body>
 </html>

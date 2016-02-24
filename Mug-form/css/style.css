@@ -28,7 +28,7 @@ loader css*/
 
 }
 
-.container {
+.container1 {
       position: absolute;
       top:0;
       bottom: 0;
@@ -157,8 +157,10 @@ body
 
 }
 
+
 .questions2{
   font-family: "Roboto",sans-serif;
+  min-width: 4vw;
   color: #fff;
   position: absolute;
   font-size: 1.5vw;
@@ -187,7 +189,7 @@ body
     margin: 6px 0;
     display: inline-block;
     text-decoration: none;
-    min-width: 120px;
+    min-width: 4vw;
     transition: 0.3s;
 }
 
@@ -195,6 +197,12 @@ body
   color:#fff;
   background:#009688;
   transition: 0.3s;
+}
+
+#form{
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 /*.input
 {
