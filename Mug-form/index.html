@@ -44,8 +44,19 @@ $("#trav").click(function(){
 });
 
 
-preload('bearhi.gif','travolta.gif');
-
+		<!--//--><![CDATA[//><!--
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"images/bearhi.gif",
+				"images/travolta.gif"
+			)
+		//--><!]]>
 </script>
 </body>
 </html>
