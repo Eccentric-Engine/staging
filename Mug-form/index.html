@@ -6,7 +6,41 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
+<style>
+html,body
+{
+  height: 100%;
+  width: 100%;
+}
 
+.simform{
+  height: 100%;
+
+}
+
+#main
+{
+  height:100%;
+}
+
+
+section
+{
+  height:100%;
+}
+
+
+object{
+	width:100%;
+  height:100%;
+}
+
+#theForm{
+  width: 100%;
+  height:100%;
+}
+
+</style>
 </head>
 <body>
 <div id="main">
@@ -63,6 +97,9 @@ $("#trav").click(function(){
 });
 
 
+// hide loader.
+
+
 setTimeout(function() {
    $('#loader').addClass("animated fadeOutUpBig");
    $('.container').addClass("animated fadeOutUpBig");
@@ -70,15 +107,11 @@ setTimeout(function() {
 
 });
 
-// hide loader.
-
-
-
-;
-
 // console.log(mainhtml);
 
  function formhtml(){
+
+
    document.getElementById('main').innerHTML = "<object type='text/html' data='form.html'></object>";
  }
 
