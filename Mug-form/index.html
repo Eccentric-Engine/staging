@@ -42,7 +42,7 @@ object{
 
 </style>
 </head>
-<body>
+<body onclick="clicks();">
 <div id="main">
 
 
@@ -65,7 +65,7 @@ object{
 
 
 <div id="screen1">
-  <img src="images/bearhi.gif" class="gif">
+  <img src="img/bearhi.gif" class="gif">
 <div class="overlay"></div>
 <h1 class="welcome animated bounceInUp">Hello, valued employee.</h1>
   <br/><h2 class="questions2 animated bounceInLeft">Click anywhere to continue.</h2>
@@ -73,7 +73,7 @@ object{
 
 
 <div id="trav">
-  <img src="images/travolta.gif" class="gif">
+  <img src="img/travolta.gif" class="gif">
   <div class="overlay"></div>
   <h1 id="heading2" class="questions">We have some fuckall questions for you.</h1>
   <div id="fillthis"></div>
@@ -85,6 +85,17 @@ object{
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
+
+//counts clicks to display graphic
+
+var click = 0;
+
+function clicks(){
+  click++;
+  console.log(click);
+}
+
+
 
 $(document).ready(function(){
 
@@ -103,7 +114,7 @@ $("#trav").click(function(){
 setTimeout(function() {
    $('#loader').addClass("animated fadeOutUpBig");
    $('.container').addClass("animated fadeOutUpBig");
- }, 6000);
+ }, 1000);
 
 });
 
