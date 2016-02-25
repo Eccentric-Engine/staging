@@ -20,9 +20,7 @@
 		<div class="container">
 
 			<div class="fs-form-wrap" id="fs-form-wrap">
-				<div class="fs-title">
-					<h1>You know what to do.</h1>
-				</div>
+
 
 
 
@@ -30,7 +28,7 @@
 					<ol class="fs-fields">
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q1" data-info="You know, the one mummy and daddy gave you.">What's your name?</label>
-							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Ramesh Dickshit" required/>
+							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Ramesh Dickshit" oninput="sarcastic1()" required/>
 						</li>
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We want to send you pictures of our cats.">What's your email address?</label>
@@ -46,15 +44,15 @@
 
 								<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">I make games and shizz.</label></span>
 
-								<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">I am Manan.</label></span>
-
-
 							</div>
 						</li>
 
 					</ol><!-- /fs-fields -->
 					<button class="fs-submit" type="submit">Send answers</button>
 				</form><!-- /fs-form -->
+				<div class="fs-title" id="sarcasm">
+
+				</div>
 			</div><!-- /fs-form-wrap -->
 
 
@@ -62,7 +60,8 @@
 		<script src="js/classie.js"></script>
 		<script src="js/selectFx.js"></script>
 		<script src="js/fullscreenForm.js"></script>
-		<script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script>
 			(function() {
 				var formWrap = document.getElementById( 'fs-form-wrap' );
 
@@ -81,6 +80,51 @@
 					}
 				} );
 			})();
+
+
+			$('#q1').keyup(updateCount);
+			$('#q1').keydown(updateCount);
+
+
+
+			function updateCount() {
+			    var cs = $(this).val().length;
+
+					if(cs>=1)
+					{
+
+			    $('.fs-title').html("<h1 class='animated bounceInUp'>Really? That's what your parents named you?</h1>");
+				}
+
+				if(cs>4)
+				{
+					$(".fs-title").html("");
+
+					$(".fs-title").html("<h1>That's embarassing...</h1>");
+				}
+			}
+
+			// function sarcastic1(){
+			//
+			// 		document.getElementById('sarcasm').innerHTML = "<h1>Really? What were your parents thinking?</h1>";
+			//
+			// }
+			//
+
+
+					$(document).ready(function(){
+
+
+						$('.fs-continue').click(function(){
+
+								$(".fs-title").html("");
+
+								});
+
+
+
+					});
+
 		</script>
 	</body>
 </html>
