@@ -169,6 +169,7 @@
 		// show next field
 		this.ctrlContinue.addEventListener( 'click', function() {
 			self._nextField();
+
 		} );
 
 		// navigation dots
@@ -187,15 +188,15 @@
 				if( !input ) return;
 
 				switch( input.tagName.toLowerCase() ) {
-					case 'select' :
-						input.addEventListener( 'change', function() { self._nextField(); } );
-						break;
+				// 	case 'select' :
+				// //		input.addEventListener( 'change', function() { self._nextField(); } );
+				// 		break;
 
-					case 'input' :
-						[].slice.call( fld.querySelectorAll( 'input[type="radio"]' ) ).forEach( function( inp ) {
-							inp.addEventListener( 'change', function(ev) { self._nextField(); } );
-						} );
-						break;
+					// case 'input' :
+					// 	[].slice.call( fld.querySelectorAll( 'input[type="radio"]' ) ).forEach( function( inp ) {
+					// 		inp.addEventListener( 'change', function(ev) { self._nextField(); } );
+					// 	} );
+					// 	break;
 
 					/*
 					// for our custom select we would do something like:
@@ -209,12 +210,15 @@
 			}
 		} );
 
+
 		// keyboard navigation events - jump to next field when pressing enter
 		document.addEventListener( 'keydown', function( ev ) {
 			if( !self.isLastStep && ev.target.tagName.toLowerCase() !== 'textarea' ) {
 				var keyCode = ev.keyCode || ev.which;
 				if( keyCode === 13 ) {
 					ev.preventDefault();
+					// console.log(keyCode);
+					document.getElementById('sarcasm').style.display="none";
 					self._nextField();
 				}
 			}

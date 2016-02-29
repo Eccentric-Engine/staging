@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Fullscreen Form Interface</title>
+		<title>Because we love you.</title>
 		<meta name="description" content="Fullscreen Form Interface: A distraction-free form concept with fancy animations" />
 		<meta name="keywords" content="fullscreen form, css animations, distraction-free, web design" />
 
@@ -28,7 +28,7 @@
 					<ol class="fs-fields">
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q1" data-info="You know, the one mummy and daddy gave you.">What's your name?</label>
-							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Ramesh Dickshit" oninput="sarcastic1()" required/>
+							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Ramesh Dickshit" required/>
 						</li>
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We want to send you pictures of our cats.">What's your email address?</label>
@@ -42,7 +42,7 @@
 
 								<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">I am a bitch-ass code monkey.</label></span>
 
-								<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">I make games and shizz.</label></span>
+								<span><input id="q3a" name="q3" type="radio" value="games"/><label for="q3a" class="radio-social">I make games and shizz.</label></span>
 
 							</div>
 						</li>
@@ -82,18 +82,23 @@
 			})();
 
 
+
+
+
+
 			$('#q1').keyup(updateCount);
 			$('#q1').keydown(updateCount);
+
 
 
 
 			function updateCount() {
 			    var cs = $(this).val().length;
 
-					if(cs>=1)
+					if(cs>1)
 					{
 
-			    $('.fs-title').html("<h1 class='animated bounceInUp'>Really? That's what your parents named you?</h1>");
+			    $('.fs-title').html("<h1>Really? That's what your parents named you?</h1>");
 				}
 
 				if(cs>4)
@@ -102,7 +107,63 @@
 
 					$(".fs-title").html("<h1>That's embarassing...</h1>");
 				}
+
+				if(cs>9)
+				{
+					$(".fs-title").html("");
+
+					$(".fs-title").html("<h1>People must have made fun of you in school.</h1>");
+				}
+
+				if(cs>8)
+				{
+					$(".fs-title").html("");
+
+					$(".fs-title").html("<h1>You have a ladyboy name.</h1>");
+				}
+
+				if(cs>12)
+				{
+					$(".fs-title").html("");
+
+					$(".fs-title").html("<h1>Did your parents even go to school?</h1>");
+				}
+
+
+				if(cs>15)
+				{
+					$(".fs-title").html("");
+
+					$(".fs-title").html("<h1>Your long-ass name just makes fun of itself...</h1>");
+				}
+
+				if (cs==0)
+				{
+					$(".fs-title").html("");
+
+
+
+				}
+
+
+
 			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			// function sarcastic1(){
 			//
@@ -111,15 +172,34 @@
 			// }
 			//
 
-
 					$(document).ready(function(){
+
+
+
+
+						console.log("This filth was brought to you by Vishesh Jeswani and Akhil Rajani.");
 
 
 						$('.fs-continue').click(function(){
 
 								$(".fs-title").html("");
 
-								});
+							}); /// need to add a function for enter press as well...
+
+
+							// $("#q3b").mouseover(function(){
+							//
+							// 	$(".fs-title").html("<img src='images/bearhi.gif'>");
+							//
+							// });
+							//
+							// // $("#q3b").mouseout(function(){
+							// //
+							// // 	$(".fs-title").html("");
+							// //
+							// // });
+
+
 
 
 
