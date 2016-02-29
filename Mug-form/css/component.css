@@ -14,7 +14,7 @@
 .fs-title {
 	position: absolute;
 	top: 55%;
-	left: 25%;
+	left: 13%;
 	margin: 0;
 	padding: 40px;
 	width: 100%;
@@ -884,4 +884,11 @@ input[type=text]::-ms-clear {
 		-webkit-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 	}
+}
+
+
+.gifbox img{
+	height:100vh;
+	width:100%;
+	position: absolute;
 }

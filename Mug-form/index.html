@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+<link rel="shortcut icon" type="image/x-icon" href="img/troll.png" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
 <style>
@@ -40,6 +40,10 @@ object{
   height:100%;
 }
 
+.mouse{
+  width:80px;
+}
+
 </style>
 </head>
 <body onclick="clicks();">
@@ -67,6 +71,7 @@ object{
 <div id="screen1">
   <img src="img/bearhi.gif" class="gif">
 <div class="overlay"></div>
+<img src="" class="mouse">
 <h1 class="welcome animated bounceInUp">Hello, valued employee.</h1>
   <br/><h2 class="questions2 animated bounceInLeft">Click anywhere to continue.</h2>
 </div>
@@ -114,7 +119,7 @@ $("#trav").click(function(){
 setTimeout(function() {
    $('#loader').addClass("animated fadeOutUpBig");
    $('.container').addClass("animated fadeOutUpBig");
- }, 1000);
+ }, 6000);
 
 });
 

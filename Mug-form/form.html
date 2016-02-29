@@ -35,12 +35,12 @@
 							<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="kewl_chickmagnet69@gmale.com" required/>
 						</li>
 						<li data-input-trigger>
-							<label class="fs-field-label fs-anim-upper" for="q3" data-info="">What do you do here?</label>
+							<label class="fs-field-label fs-anim-upper" for="q3" data-info="Besides being a butt monkey.">What do you do here?</label>
 							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 
-								<span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">I wank around on social media.</label></span>
+								<span><input id="q3b" name="q3" type="radio" value="social"/><label for="q3b" class="radio-conversion">I wank around on social media.</label></span>
 
-								<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">I am a bitch-ass code monkey.</label></span>
+								<span><input id="q3c" name="q3" type="radio" value="code"/><label for="q3c" class="radio-social">I am a bitch-ass code monkey.</label></span>
 
 								<span><input id="q3a" name="q3" type="radio" value="games"/><label for="q3a" class="radio-social">I make games and shizz.</label></span>
 
@@ -53,6 +53,8 @@
 				<div class="fs-title" id="sarcasm">
 
 				</div>
+
+				<div class="gifbox"></div>
 			</div><!-- /fs-form-wrap -->
 
 
@@ -151,6 +153,20 @@
 
 
 
+// radio button gif function
+
+$('input:radio[name="q3"]').change(
+    function(){
+        if (this.checked && this.value == 'social') {
+					$(".gifbox").html("<img src='img/social.gif'>");
+
+        }
+
+				else {
+					$(".gifbox").html("");
+
+				}
+    });
 
 
 
