@@ -219,7 +219,9 @@
 					ev.preventDefault();
 					// console.log(keyCode);
 					document.getElementById('sarcasm').style.display="none";
+
 					self._nextField();
+
 				}
 			}
 		} );
@@ -231,6 +233,7 @@
 	 */
 	FForm.prototype._nextField = function( backto ) {
 		if( this.isLastStep || !this._validade() || this.isAnimating ) {
+
 			return false;
 		}
 		this.isAnimating = true;
@@ -465,6 +468,8 @@
 		this.msgError.innerHTML = message;
 		this._showCtrl( this.msgError );
 	}
+
+
 
 	// clears/hides the current error message
 	FForm.prototype._clearError = function() {

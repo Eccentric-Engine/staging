@@ -20,6 +20,7 @@
 		<div class="container">
 
 			<div class="fs-form-wrap" id="fs-form-wrap">
+				<div class="gifbox" id="gifbruh"></div>
 
 
 
@@ -34,17 +35,53 @@
 							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We want to send you pictures of our cats.">What's your email address?</label>
 							<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="kewl_chickmagnet69@gmale.com" required/>
 						</li>
+
 						<li data-input-trigger>
-							<label class="fs-field-label fs-anim-upper" for="q3" data-info="Besides being a butt monkey.">What do you do here?</label>
+							<label class="fs-field-label fs-anim-upper" for="q3" data-info="">How do you waste time here?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+
+								<span><input id="q4b" name="q4" type="radio" value=""/><label for="q4b" class="radio-1">I look at the boys and touch myself.</label></span>
+
+								<span><input id="q4c" name="q4" type="radio" value=""/><label for="q4c" class="radio-2">I look at the girls and touch myself.</label></span>
+
+
+							</div>
+
+
+						<li data-input-trigger>
+							<label class="fs-field-label fs-anim-upper" for="q4" data-info="Besides being a butt monkey.">What do you do here?</label>
 							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 
 								<span><input id="q3b" name="q3" type="radio" value="social"/><label for="q3b" class="radio-conversion">I wank around on social media.</label></span>
 
 								<span><input id="q3c" name="q3" type="radio" value="code"/><label for="q3c" class="radio-social">I am a bitch-ass code monkey.</label></span>
 
-								<span><input id="q3a" name="q3" type="radio" value="games"/><label for="q3a" class="radio-social">I make games and shizz.</label></span>
+								<span><input id="q3a" name="q3" type="radio" value="games"/><label for="q3a" class="radio-money ">I make games and shizz.</label></span>
+
+								<span><input id="q3d" name="q3" type="radio" value="video"/><label for="q3d" class="radio- ">I make shady videos.</label></span>
+
+
+
 
 							</div>
+
+
+							<li data-input-trigger>
+								<label class="fs-field-label fs-anim-upper" for="q5" data-info="">Who is the biggest asshole?</label>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+
+									<span><input id="q5b" name="q5" type="radio" value="#"/><label for="q5b" class="radio-conversion">1</label></span>
+
+									<span><input id="q5c" name="q5" type="radio" value="#"/><label for="q5c" class="radio-social">2</label></span>
+
+									<span><input id="q5a" name="q5" type="radio" value="#"/><label for="q5a" class="radio-social">3</label></span>
+
+
+
+								</div>
+
+
+
 						</li>
 
 					</ol><!-- /fs-fields -->
@@ -54,7 +91,7 @@
 
 				</div>
 
-				<div class="gifbox"></div>
+
 			</div><!-- /fs-form-wrap -->
 
 
@@ -158,15 +195,27 @@
 $('input:radio[name="q3"]').change(
     function(){
         if (this.checked && this.value == 'social') {
-					$(".gifbox").html("<img src='img/social.gif'>");
+					$(".gifbox").html("<img src='img/social.gif'><div class='overlay'></div>");
 
         }
 
-				else {
-					$(".gifbox").html("");
+				else if (this.value == "code") {
+
+					$(".gifbox").html("<img src='img/nerds.gif'><div class='overlay'></div>");
+
 
 				}
-    });
+
+				else if (this.value == "games" ){
+
+					$(".gifbox").html("<img src='img/games.gif'><div class='overlay'></div>");
+
+				}
+
+
+
+});
+
 
 
 

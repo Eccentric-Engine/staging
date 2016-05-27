@@ -808,6 +808,7 @@ input[type=text]::-ms-clear {
 
 	.fs-form-wrap {
 		font-size: 70%;
+		overflow: hidden;
 	}
 
 	.fs-form {
@@ -817,6 +818,7 @@ input[type=text]::-ms-clear {
 		padding: 0 3.75em 0 1em;
 		width: auto;
 		font-size: 2em;
+		overflow: hidden;
 	}
 
 	.fs-form.fs-form-overview {
@@ -891,4 +893,13 @@ input[type=text]::-ms-clear {
 	height:100vh;
 	width:100%;
 	position: absolute;
+}
+
+.overlay{
+  background-color: #000;
+  height:100%;
+  width: 100%;
+  opacity:0.4;
+  position: absolute;
+
 }
